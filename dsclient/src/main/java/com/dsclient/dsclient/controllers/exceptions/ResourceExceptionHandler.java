@@ -6,12 +6,13 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.dsclient.dsclient.services.exceptions.DatabaseException;
 import com.dsclient.dsclient.services.exceptions.ResourceNotFoundException;
 
-
+@ControllerAdvice
 public class ResourceExceptionHandler {
 
 	@ExceptionHandler(ResourceNotFoundException.class)
